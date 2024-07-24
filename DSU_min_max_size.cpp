@@ -57,7 +57,7 @@ int main(){
         else{
             int x;
             cin>>x;
-            // find(parent, x);
+            x = find(parent, x);
             cout<<minimal[x]<<" "<<maximal[x]<<" "<<sz[x]<<"\n";
         }
     }
