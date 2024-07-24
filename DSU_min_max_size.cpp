@@ -12,10 +12,10 @@ void Union(vector<int> &parent, vector<int> &sz, vector<int> &minimal, vector<in
     // timecomplexity : O(log*(n))
     a = find(parent, a);
     b = find(parent, b);
-    if(a == b){ // if a and b are in same sets
+    if(a == b){ // if a and b are in same sets // VIMP nothing calculated
         return;
     }
-    if(rank[a] >= rank[b]){
+    if(rank[a] > rank[b]){
         rank[a]++;
         parent[b] = a; 
         sz[a] += sz[b];
