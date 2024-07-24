@@ -33,7 +33,7 @@ void topoBFS() {
     while(not qu.empty()){
 
         int node = qu.front();
-        cout<<node<<" ";
+        cout<<node<<" "; // visted node is less than given node then the graph is not dag
         qu.pop();
         for(auto neighbour : graph[node]){
             if(not vis.count(neighbour)){
